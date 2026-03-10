@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: lab-processor-service
+
+  #rabbitmq
+  #Connects to your local RabbitMQ container.
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: temp
+    connection-timeout: 5s
+    dynamic: true
+    listener:
+      simple:
+        auto-startup: false
+
+  aws:
+    region: eu-west-1
+    sns:
+      topicArn: arn:aws:sns:eu-west-1:123456789:lab-result-topic
